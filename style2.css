@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Spartan&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: none;
+  height: 100vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: fixed;
+  right: 0;
+  transform: translateY(-50%);
+  top: 50%;
+  width: 40%;
+}
+@media only screen and (min-width: 1024px) {
+  img {
+    aspect-ratio: 1/1;
+    box-shadow: 0 0 1rem 0.2rem rgba(0, 0, 0, 0.3);
+    height: auto;
+    right: 5%;
+  }
+}
+
+li {
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  justify-content: flex-start;
+  font-family: "Spartan", "sans-serif";
+  font-weight: 900;
+  font-size: 3rem;
+  color: black;
+  min-height: 1vw;
+  height: 100vh;
+  line-height: 1.5;
+  padding: 9%;
+  position: relative;
+  width: 50%;
+}
+
+.nav-buttons {
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  padding: 5% 0;
+  position: fixed;
+  right: 0;
+  width: 5%;
+  z-index: 2;
+}
+
+.nav-buttons .btn:hover {
+  opacity: 1;
+}
+.nav-buttons .btn:hover + .preview {
+  display: block;
+}
+.nav-buttons .preview {
+  background-color: black;
+  border-radius: 0.5rem;
+  content: "";
+  display: none;
+  height: 5rem;
+  position: absolute;
+  right: 3rem;
+  width: 5rem;
+  z-index: 3;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#canvas{
+  background: #9AD0EC;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.o_heart{
+  fill: #FFC0D3;
+}
+.i_heart{
+  fill: white;
+}
+
+
+.arrow_container{
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  border: 1px solid black;
+  z-index: 1000;
+  bottom: 15px;
+  left: 0px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.main {
+  font-size: 10px;
+  font-family: QuinleeSans-Regular !important;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  padding: 20px;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+@media screen and (min-width: 800px) {
+  .main {
+    margin-left: -400px;
+    width: 800px;
+    left: 50%;
+  }
+}
+
+@-webkit-keyframes beat {
+  4% {
+    padding: 0;
+  }
+  34% {
+    padding: 7px;
+  }
+  38% {
+    padding: 0;
+  }
+  68% {
+    padding: 7px;
+  }
+}
+
+@keyframes beat {
+  4% {
+    padding: 0;
+  }
+  34% {
+    padding: 7px;
+  }
+  38% {
+    padding: 0;
+  }
+  68% {
+    padding: 7px;
+  }
+}
+.heart {
+  padding: 7px;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem;
+  background: white;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+  -webkit-animation-duration: 0.75s;
+          animation-duration: 0.75s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+.heart:hover {
+  -webkit-animation-name: beat;
+          animation-name: beat;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+.heart img {
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.blue {
+  flex-order: 1;
+}
+.blue:hover {
+  background: #8ab7d5 radial-gradient(80% 80%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 50%);
+}
+
+.red {
+  flex-order: 2;
+}
+.red:hover {
+  background: 
+  #FFC0D3 radial-gradient(80% 80%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 50%);
+}
+
+.green {
+  flex-order: 3;
+}
+.green:hover {
+  background: #8acec9 radial-gradient(80% 80%, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 50%);
+}
+
+.no-animate {
+  -webkit-animation-name: none;
+          animation-name: none;
+}
+
+h1 {
+  flex-basis: 100%;
+  margin: 10vh 0 0;
+  font-size: 1.4rem;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  transition: opacity 0.25s ease-out;
+}
+
+q {
+  display: none;
+  flex-basis: 100%;
+  color: white;
+  font-size: 3.3rem;
+  text-align: center;
+  line-height: 1.4;
+  font-weight: 600;
+  font-family: Carolline;
+}
+
+.shrink {
+  margin: 0;
+  padding: 0;
+  width: 0;
+  height: 0;
+  border: 0;
+}
+
+.hide {
+  opacity: 0;
+}
+
+.show {
+  opacity: 1;
+}
+
+.close {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+mark {
+  background-color: transparent;
+  color: #FFC0D3;
+}
+
+
+@font-face {
+  font-family: Carolline;
+  src: url('Carolline.ttf');
+}

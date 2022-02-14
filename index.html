@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Blue Valentine</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shortcut icon" href="icon/cassette.png">
+        <script src="script.js" defer></script>
+    </head>
+    <body>
+        <section class="showcase">
+            <header>
+                <button onclick="playAudio()" class="logo">
+                    <span class="button_top"> Ấn ở đây trước ik ▶
+                    </span>
+                  </button>
+                <!-- <div class="toggle"></div> -->
+            </header>
+
+              <video src="vid.mp4" muted loop autoplay></video>
+             
+              <div class="text">
+                <h2>for your eyez only</h2> 
+                <h3>ton <mark>Orange</mark></h3>
+                <p>Dành cho Nguyễn Anh Thư dễ thưng
+                </p>
+                <a href="ChienYeuThuLamA.html">Open</a>
+              </div>
+              <ul class="social">
+                <div>
+                    <div class="typing-demo">
+                      A little Valentine gift for my dear Blue.
+                    </div>
+                </div>
+              </ul>
+        </section>
+
+            <!-- <div class="menu">
+                <ul>
+                    <li><a href="https://www.tatlerasia.com" target="_blank">News</a></li> 
+                    <li><a href="https://orange-e.tumblr.com" target="_blank">Blog</a></li>
+                    <li><a href="#" id="contact">contact</a></li>
+                    <li><a href="#" id="num">1800-420-666</a></li>
+                </ul>
+            </div> -->
+
+    <audio id="myAudio">
+        <source src="comethru.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="myAudio2">
+      <source src="20.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        var pl = document.getElementById("myAudio"); 
+        var pl2 = document.getElementById("myAudio2");
+        pl.onended = function(){
+          pl = undefined;
+          pl2.play();
+        }
+
+        function playAudio() { 
+          pl.play();
+        } 
+        </script>
+    </body>
+</html>

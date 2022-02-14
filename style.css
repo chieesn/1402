@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+
+:root{
+    --overlay-color: #3D7EA6;
+}
+
+
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.showcase{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    color: #fff;
+    z-index: 2;
+}
+
+.showcase header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 69;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*----start logo part----*/
+.logo{
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    color: #fff;
+    position: absolute;
+}
+
+.logo h2::before {  
+    transform: scaleX(0);
+    transform-origin: bottom right;
+  }
+
+/*----end logo part----*/
+
+/* 
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url('icon/menu.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: center;
+    cursor: pointer;
+}
+
+.toggle.active{
+    background: url('icon/close.png');
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+} */
+
+.showcase video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+}
+
+.showcase.active{
+    right: 300px;
+
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--overlay-color);
+    mix-blend-mode: overlay;
+    opacity: 0.5;
+}
+
+.text{
+    position: relative;
+    z-index: 3;
+}
+
+.text h2{
+    font-size: 5em;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: uppercase;
+    
+}
+
+.text h3{
+    font-size: 3em;
+    font-weight: 500;
+    line-height: 1.3em;
+    text-transform: uppercase;
+}
+
+.text p{
+    font-size: 1.1em;
+    margin: 20px 0;
+    font-weight: 400;
+    max-width: 700px;
+    margin-bottom: 5%;
+}
+
+/* .text a{
+    display: inline-block;
+    font-size: 1em;
+    background: #fff;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #111;
+    margin-top: 10px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.2s;
+}
+
+.text a:hover{
+    letter-spacing: 4px;
+} */
+
+a {
+    background-color: #0F0E0E;
+    box-shadow: 0 5px 0 #0f0e0ece;
+    color: white;
+    padding: 1em 1.5em;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
+  }
+  
+  a:hover {
+    background-color: #0F0E0E;
+    cursor: pointer;
+  }
+  
+  a:active {
+    box-shadow: none;
+    top: 5px;
+  }
+
+.social{
+    position: absolute;
+    bottom: 20px;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social li{
+    list-style: none;
+}
+
+.social li a{
+    display: inline-block;
+    filter: invert(1);
+    margin-right: 20px;
+    transform: scale(0.5);
+    transition: 0.5s;
+}
+
+.social li a:hover{
+    transform: scale(0.5) translateY(-15px);
+}
+
+.menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu li{
+    position: relative;
+    list-style: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 7%;
+}
+
+.menu ul li a{
+    text-decoration: none;
+    font-size: 24px;
+    color: #111;
+}
+
+.menu ul li a:hover{
+    color: var(--overlay-color);
+}
+
+#num{
+    display: none;
+    width: 150%;
+}
+
+@media(max-width: 798px){
+    .showcase .showcase header{
+        padding: 40px;
+    }
+
+    .text h2{
+        font-size: 3em;
+    }
+
+    .text h3{
+        font-size: 2em;
+    }
+}
+
+  
+  .typing-demo {
+    width: 41ch;
+    animation: typing 4s steps(41), blink 0.7s step-end infinite alternate;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid;
+    font-family: monospace;
+    font-size: 2em;
+  }
+  
+  @keyframes typing {
+    from {
+      width: 0
+    }
+  }
+      
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+  /* From cssbuttons.io by @Voxybuns */
+button {
+    /* Variables */
+   --button_radius: 0.75em;
+   --button_color: #e8e8e8;
+   --button_outline_color: #0F0E0E;
+   font-size: 10px;
+   font-weight: bold;
+   border: none;
+   border-radius: var(--button_radius);
+   background: var(--button_outline_color);
+  }
+  
+  .button_top {
+   display: block;
+   box-sizing: border-box;
+   border: 2px solid var(--button_outline_color);
+   border-radius: var(--button_radius);
+   padding: 0.75em 1.5em;
+   background: var(--button_color);
+   color: var(--button_outline_color);
+   transform: translateY(-0.2em);
+   transition: transform 0.1s ease;
+  }
+  
+  button:hover .button_top {
+    /* Pull the button upwards when hovered */
+   transform: translateY(-0.33em);
+  }
+  
+  button:active .button_top {
+    /* Push the button downwards when pressed */
+   transform: translateY(0);
+  }
+
+  mark{
+      background-color: transparent;
+      color: #FF9F45 !important;
+  }
+
+
+  @font-face {
+    font-family: Ballada;
+    src: url('Ballada.ttf');
+  }
+
+
+
